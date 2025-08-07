@@ -5,10 +5,17 @@ from django.db import models
 def homepageview (request):
     try:
         Restaurant_from_db = Restaurant.objects,first()
-        Restaurnat_name = Restaurant.objects.name()
-        Restaurant_slogan = Restaurant.objects.slogan()
+        name = Restaurant.objects.name()
+        slogan = Restaurant.objects.slogan()
     except:
-        Restaurnat_name = Restaurnat_name
-        Restaurant_slogan = 
+        Restaurnat_name = "THE NORTSOUT RESTAURANT"
+        Restaurant_slogan = "slogan"
+    context:
+        {
+            'name' : name,
+            'slogan' : slogan 
+        }
+
+    
         
     return(request, homepageview, context)   
