@@ -9,7 +9,7 @@ def homepageview (request):
         slogan = Restaurant.objects.slogan()
     except:
         Restaurnat_name = "THE NORTSOUT RESTAURANT"
-        Restaurant_slogan = "slogan"
+        Restaurant_slogan = "TASTE CONNECTS FROM NORTH TO SOUTH"
     context:
         {
             'name' : name,
