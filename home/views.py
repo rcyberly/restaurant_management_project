@@ -19,3 +19,7 @@ def homepageview (request):
     
         
     return(request, homepageview, context)   
+
+    def reservation_page_view(request):
+        viewsets = reservations.objects.all()
+        
