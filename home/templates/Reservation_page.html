@@ -4,11 +4,41 @@
         <title>Reservation Page</title>
         <meta charset="UTF-8">
         <meta name = "viewport" content="content-width, initial-scale = 1.0">
+        <style>
+            .reservation
+            {
+                background-color: red;
+                padding: 50px;
+                margin-left: 20px;
+                margin-Right:20px;
+            }
+
+            form
+            {
+            color : black;
+            padding: 50px;
+            }
+
+            label
+            {
+                background-color : maroon;
+                color: white;
+                padding : 80px;
+                margin-left: 30px;
+                margin-Right: 30px;
+            }
+            footer
+            {
+                background-color : black;
+                color: white;
+            }
+        </style>
 
     </head>
     <body>
-        <div>
+        <div class = "reservation" >
             <h1> You can make Reservation here </h1>
+        </div>
             <form>
                 {% csrf_token %}
                 <label for = "datetime">Enter Date</label>
@@ -21,7 +51,7 @@
                 <input type="email" name = "email">
                 <input type="submit" name = "submit">
             </form>
-        </div>
+        
 
         <footer>
             <h5>All rights reserved with </h5>
