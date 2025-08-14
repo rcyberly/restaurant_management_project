@@ -40,6 +40,19 @@ def homepageview (request):
         else:
             form = reservation_page_view()
         return render(request, 'home/Reservation_page.html', context)
+
+    def customer_feedback_view(request):
+        if request.method =="POST":
+            form = customer_feedback_view(request.POST)
+            if form.form_is_valid():
+                form.save()
+                message.success = (request,'form data has been saved')
+            else:
+                form = FeedbackForm()
+                success = request.GET.get(submitted)==True
+        return render(request, 'home/customer_feedback.html', {'form':form,'sucess':success} )
+
+
                 
 
         
