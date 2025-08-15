@@ -1,6 +1,7 @@
 from django.shortcuts import render, request
 from django.db import models
 from django.contrib import messages
+import datetime
 
 
 # Create your views here.
@@ -51,6 +52,12 @@ def homepageview (request):
                 form = FeedbackForm()
                 success = request.GET.get(submitted)==True
         return render(request, 'home/customer_feedback.html', {'form':form,'sucess':success} )
+
+    def footer_page_view(request):
+        context = {
+            
+            'date_time' : datetime.datetime.now(),
+        }
 
 
                 
