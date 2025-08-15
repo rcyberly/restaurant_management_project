@@ -1,6 +1,20 @@
 <footer>
     <h1>2025 Copyright Act : Copyright in any form is illegal</h1>
     <p>Brand Name : THE NORTH-SOUTH RESTAURANT </p>
-    {% if date_time  %}
-    
+    <h3>Restaurant timings will be as per this Schedule given Below :</h3>
+    {% if date_time == Monday %}
+    <p>Monday : 11am to 9pm</p>
+    {% else %}
+    <p>Tuesday : 11am to 9pm</p>
+    {% else %}
+    <p>Wednesday : 11am to 9pm</p>
+    {% else %}
+    <p>Thursday : 11am to 9pm</p>
+    {% else %}
+    <p>Friday : 11am to 9pm</P>
+    {% else %}
+    <p>Satruday : 10am to 10pm</p>
+    {% else %}
+    <p>Sunday : 10am to 10pm</p>
+    {% endif %}
 </footer>
