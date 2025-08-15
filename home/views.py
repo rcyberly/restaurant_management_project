@@ -54,10 +54,11 @@ def homepageview (request):
         return render(request, 'home/customer_feedback.html', {'form':form,'sucess':success} )
 
     def footer_page_view(request):
-        context = {
+        context1 = {
             
             'date_time' : datetime.datetime.now(),
         }
+        return render (requst, 'home/footer.html' context1)
 
 
                 
