@@ -10,5 +10,14 @@ class Restaurant(object):
         restaurant_instance = Restaurant.name("THE NORTSOUT RESTAURANT")
         restaurant_instance.save()
 
+class Order (models.Model):
+    customer = models.CharField(pk=True,)
+    order_items = models.CharField(choice = (MenuItems))
+    total_amount = models.IntegerField()
+    order_status = models.CharField(pk = true, customer_name= choice(customer))
+    
+    def '__str__'(self):
+        return self.name
+
 
 
