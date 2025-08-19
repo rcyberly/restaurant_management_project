@@ -11,10 +11,10 @@ class Restaurant(object):
         restaurant_instance.save()
 
 class Order (models.Model):
-    customer = models.CharField(pk=True,)
+    customer = models.CharField(pk)
     order_items = models.CharField(choice = (MenuItems))
     total_amount = models.IntegerField()
-    order_status = models.CharField(pk = true, customer_name= choice(customer))
+    order_status = models.CharField(pk, customer_name= choice(customer))
     
     def '__str__'(self):
         return self.name
