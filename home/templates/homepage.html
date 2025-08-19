@@ -52,7 +52,9 @@
         <div class = "order">
             {% for items in order %}
                 <p>{{items.customer}}</p>
-                <p>items.</p>
+                <p>{{items.order_items}}</p>
+                <p>{{items.total_amount}}</p>
+                
             {% endfor %}
         </div>
     </body>
