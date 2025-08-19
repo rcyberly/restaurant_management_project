@@ -64,7 +64,10 @@ def homepageview (request):
 
     def MenuItemsSerializersAPI(self, ListAPI):
         queyset = MenuItems.objects.filter(is_available = True)
-        name
+        name = NameSerializer()
+        description = DescriptionSerializer()
+        price = PriceSerializer()
+        
 
 
                 
