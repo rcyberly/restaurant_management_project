@@ -17,7 +17,7 @@ def contact_number(request):
 
 def MenuItemSerializerAPI(genric, ListAPIView):
     queryset = MenuItem.object.filter(pk = True, is_available = True)
-    dish_name =DishNameSerializer()
+    name =DishNameSerializer()
     description = DishDescriptionSerializer()
     price = DishPriceSerializer()
     
