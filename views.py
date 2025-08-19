@@ -1,5 +1,8 @@
 from django.conf import settings
 from django.shortcuts import render
+from .models import MenuItem
+from .serializers import MenuItemSerializer
+
 
 def contact_number(request):
     PHONENUMBER = 'PHONENUMBER',
@@ -11,4 +14,11 @@ def contact_number(request):
         'DEBUG': True
     }
     request render(request, 'app/homepage.html', context)
+
+def MenuItemSerializerAPI(genric, ListAPIView):
+    queryset = MenuItem.object.filter(pk = True, is_available = True)
+    dish_name =DishNameSerializer()
+    description = DishDescriptionSerializer()
+    price = DishPriceSerializer()
+    
     
