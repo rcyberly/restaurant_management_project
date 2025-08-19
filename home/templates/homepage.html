@@ -49,6 +49,12 @@
                 <li>Products</li>
             </ul>
         </div>
+        <div class = "order">
+            {% for items in order %}
+                <p>{{items.customer}}</p>
+                <p>items.</p>
+            {% endfor %}
+        </div>
     </body>
 </html>
 {% endblock %}
