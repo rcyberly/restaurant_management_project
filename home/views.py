@@ -3,7 +3,7 @@ from django.db import models
 from django.contrib import messages
 import datetime
 from .models import MenuItems
-from .serializers import 
+from .serializers import MenuItemsSerializers
 
 
 # Create your views here.
@@ -61,6 +61,9 @@ def homepageview (request):
             'date_time' : datetime.datetime.now(),
         }
         return render (requst, 'home/footer.html' context1)
+
+    def MenuItemsSerializersAPI(self, ListAPI):
+        queyset = MenuItems.objects.filter()
 
 
                 
