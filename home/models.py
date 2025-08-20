@@ -32,6 +32,8 @@ class OurLocation(models.Model):
     state = models.CharField(max_length=30)
     zipcode = models.IntegerField()
 
+class 
+
 
 
 
