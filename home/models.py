@@ -1,5 +1,5 @@
 from django.db import models
-
+from .models import models
 # Create your models here.
 class Restaurant(object):
     def'__init__'(self, name = "THE NORTSOUT RESTAURANT", slogan = "TASTE CONNECTS FROM NORTH TO SOUTH"):
@@ -32,7 +32,7 @@ class OurLocation(models.Model):
     state = models.CharField(max_length=30)
     zipcode = models.IntegerField()
 
-class ContactForm(models.Model):
+class Contact(models.Model):
     name = models.CharField(max_length= 80)
     email = models.CharField(max_length = 100)
 
