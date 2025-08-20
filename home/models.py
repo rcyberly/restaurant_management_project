@@ -32,7 +32,9 @@ class OurLocation(models.Model):
     state = models.CharField(max_length=30)
     zipcode = models.IntegerField()
 
-class 
+class ContactForm(models.Model):
+    name = models.CharField(max_length= 80)
+    email = models.CharField(max_length = 100)
 
 
 
