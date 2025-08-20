@@ -26,6 +26,12 @@ class UserProfile(models.Model):
     class Meta:
         abstract : True
 
+class OurLocation(models.Model):
+    address = models.CharField(max_length = 200)
+    city = models.CharField(max_length= 30)
+    state = models.CharField(max_length=30)
+    zipcode = models.IntegerField()
+
 
 
 
