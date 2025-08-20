@@ -62,11 +62,16 @@ def homepageview (request):
         }
         return render (requst, 'home/footer.html' context1)
 
+
+    def 
+
     def MenuItemsSerializersAPI(self, ListAPI):
         queyset = MenuItems.objects.filter(is_available = True)
         name = NameSerializer()
         description = DescriptionSerializer()
         price = PriceSerializer()
+
+    
         
 
 
