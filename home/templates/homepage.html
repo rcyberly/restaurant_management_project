@@ -28,7 +28,13 @@
         <div class="hp1">
             <h1>Welcome to Restaurant Management System</h1>
         </div>
-        for 
+       {% if restaurant %}
+        <div>
+            <p>{{Restaurant.name}}</p>
+        {% else %}
+            <h3>Restaurant is not available </h3>
+        </div>
+        {% endif %}
 
         <div class="search-container">
             <form action ="/search" method="get">
