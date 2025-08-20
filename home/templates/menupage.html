@@ -12,8 +12,9 @@
             <p>{{items.item_name}}</p>
             <p>{{items.item_description}}</p>
             <p>{{items.item_price}}</p>
-            <p>{% if items.img %}</p>
-            
+            {% if items.img %}
+            <img src = "{{items.image.url}}" alt = "{{items.image.name}}"
+            %}
             
         </div>
     </body>
