@@ -49,15 +49,19 @@
                 <li>Products</li>
             </ul>
         </div>
-
-        <div class = "menuimage">
-                <h3>Our Menus are given Below: </h3>
-                for menu
-                <h3>Item_name</h3>
-                <p>item_description</p>
-                <p>item_price</p>
-                <img 
+        <h1>Our Available Menus</h1>
+        {% for items in menuitems %}
+        <div class = "menuimage">       
+            <h3>{{items.Item_name}}</h3>
+            <p>{{items.item_description}}</p>
+            <p>{{items.item_price}}</p>
+            {% if items.image %}
+            <img src = "{{items.image.url}}" alt = "{{items.name}}" width = 200>
+            {% else %}
+            <h1>There is no image uploaded by Department</h1>
+            {% endif %}
         </div>
+        {% endfor %}
 
         <div class = "order">
             {% for items in order %}
