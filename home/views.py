@@ -63,7 +63,15 @@ def homepageview (request):
         return render (requst, 'home/footer.html' context1)
 
 
-    def 
+    def our_location_view(request):
+        try:
+            restaurant_info = Restaurant.objects.first()
+        except Restaurant.DoesNotExist
+        restaurnat_info = None
+        context2 = {
+            'restaurant': restaurnat_info
+        }
+        return render(request, 'home/homepage.html', context2)
 
     def MenuItemsSerializersAPI(self, ListAPI):
         queyset = MenuItems.objects.filter(is_available = True)
