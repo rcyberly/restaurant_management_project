@@ -36,6 +36,12 @@ class Contact(models.Model):
     name = models.CharField(max_length= 80)
     email = models.CharField(max_length = 100)
 
+class MenuItems(models.Model):
+    item_name = models.CharField(max_length=30)
+    item_description = models.TextField()
+    item_price = models.DecimalField(max_digits = 6, decimal_places = 2)
+    item_image = models.ImageField(upload_to = 'menuImages/')
+
 
 
 
