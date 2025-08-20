@@ -7,15 +7,15 @@
     </head>
     <body>
         <h1>Our available Menus </h1>
-        {% for items in menuitems%}
+        {% for items in  menuitem %}
         <div class = "imgone">
             <p>{{items.item_name}}</p>
             <p>{{items.item_description}}</p>
             <p>{{items.item_price}}</p>
             {% if items.img %}
-            <img src = "{{items.image.url}}" alt = "{{items.image.name}}"
-            %}
-            
+            <img src = "{{items.image.url}}" alt = "{{items.name}}">
+            {% endif %}
         </div>
+        {% endfor %}
     </body>
 </html>
