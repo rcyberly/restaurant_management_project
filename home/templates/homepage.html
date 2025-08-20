@@ -72,12 +72,15 @@
             {% endfor %}
         </div>
         {% if restaurant_info %}
-        <div>
+        <div class = "restaurnat_info">
             <h1> Restaurant Address </h1>
-            <p>{{address}}</p>
+            <p>{{restaurnat_info.address}}</p>
             <p>{{city}}</p>
             <p>{{state}}</p>
             <p>{{zipcode}}</p>
+        {% else %}
+        <h4>Address not found </h4>
+        {% endif %}
 
         </div>
     </body>
