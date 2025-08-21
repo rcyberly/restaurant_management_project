@@ -9,17 +9,7 @@
         <meta name="viewport" content="device-width,initial-scale = 1.0">
     </head>
     <body>
-        <h1>Our available Menus </h1>
-        {% for items in  menuitem %}
-        <div class = "imgone">
-            <p>{{items.item_name}}</p>
-            <p>{{items.item_description}}</p>
-            <p>{{items.item_price}}</p>
-            {% if items.img %}
-            <img src = "{{items.img.url}}" alt = "{{items.name}}">
-            {% endif %}
-        </div>
-        {% endfor %}
+        <div class = "menuitems">
     </body>
 </html>
 {% endblock %}
