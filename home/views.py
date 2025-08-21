@@ -73,6 +73,15 @@ def homepageview (request):
         }
         return render(request, 'home/homepage.html', context2)
 
+    def menupage_view(request):
+        try:
+            restaurant_menu = Restaurant.objects.filter.MenuItems()
+        except MenuItems.DoesNotExist
+        context3 = {
+            'restaurant_menu' : restaurant_menu
+        }
+        return render(request, 'home/menupage.html', context3)
+
     def MenuItemsSerializersAPI(self, ListAPI):
         queyset = MenuItems.objects.filter(is_available = True)
         name = NameSerializer()
