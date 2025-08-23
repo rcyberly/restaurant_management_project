@@ -114,6 +114,17 @@
                 
             </form>
         </div>
+
+        <!-- Here is the address again which we have to display -->
+        {% for items in restaurant_info %}
+        <div class = "restruant address2">
+            <h1>This is our restaurant Address</h1>
+            <p>{{item.}}</p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        {% endfor %}
     </body>
 </html>
 {% endblock %}
