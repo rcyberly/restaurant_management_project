@@ -54,6 +54,14 @@ class RestaurantOpeningHours(model.Model):
     def'__str__'(self):
         return (RestaurantOpeningHours,f{"{'day'}:{'time'}"})
 
+class MenuItem (models.Model):
+    name_of_item = models.CharField(max_length = 50)
+    description_of_item = models.TextField()
+    price_of_item = models.DecimalField(max_digits= 6, decimal_places = 7)
+    item_image = ImageField(upload_to = 'menuimages/', blank = True, null = True) 
+    def'__str__'(self):
+        self.Menuitem 
+
 
 
 
