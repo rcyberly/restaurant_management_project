@@ -52,7 +52,7 @@ class RestaurantOpeningHours(model.Model):
     day = models.CharField(, choice = ('Monday','tuesday', 'wednesday', 'Thursday', 'friday', 'staruday','sunday'))
     time = models.DateTime(auto_now_add = True)
     def'__str__'(self):
-        return (RestaurantOpeningHours)
+        return (RestaurantOpeningHours,f{"{'day'}:{'time'}"})
 
 
 
