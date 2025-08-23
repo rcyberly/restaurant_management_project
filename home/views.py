@@ -112,6 +112,8 @@ def homepageview (request):
     def Menuitem_view (request):
         Menuitem = MenuItem.objects.all()
         context5 = {
+            'name_of_item': name_of_item,
+            ''
             
         }
 
