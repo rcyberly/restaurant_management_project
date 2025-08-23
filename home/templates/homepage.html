@@ -129,7 +129,7 @@
     {% for items in RestantOpeningHours %}
     <div class = "restaurntworking">
         <h2>OUR RESTAURANT TIMINGS ARE</h2>
-        <p>OUR TODAY TIMINGS ARE : {{}}</P>
+        <p>OUR TODAY TIMINGS ARE : {{items.day}}:{{items.time}}</P>
         
     </div>
 </html>
