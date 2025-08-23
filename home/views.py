@@ -89,7 +89,26 @@ def homepageview (request):
         price = PriceSerializer()
 
     def Resturant_working_view*(self):
-        restaurnat_working = Restaurant
+        restaurnat_working = RestaurantOpeningHours.objects.all()
+        if restaurant_working == 'Sunday':
+            return f{"SUNDAY : 10:00 AM TO 21:00 PM"}
+        elif:
+             return f{"MONDAY : 11:00 AM TO 23:00 PM "}
+        elif:
+            return f{"TUESDAY : 11:00 AM TO 23:00 PM "}
+        elif:
+            return f{"WEDNESDAY : 11:00 AM TO 23:00 PM "}
+        elif:
+            return f{"THURSDAY : 11:00 AM TO 23:00 PM"}
+        elif:
+            return f{"FRIDAY : 11:00 AM TO 23:00 PM "}
+        elif: 
+            return f{"SATURDAY : 11:00 AM TO 23: 00 PM "}
+        context4 = {
+            'restaurant_working': restaurnat_working
+        }
+    return render(request, 'home/homepage.html', context4)
+
 
     
         
