@@ -48,6 +48,11 @@ class MenuItems(models.Model):
     item_image = models.ImageField(upload_to = 'menuImages/', blank = true, null = true)
     def '__str__'(self):
         return self.MenuItems
+class RestaurantOpeningHours(model.Model):
+    day = models.CharField(max_length = 30, choice = ('Monday','tuesday', 'wednesday', 'Thursday', 'friday', 'staruday','sunday'))
+    def'__str__'(self):
+        return RestaurantOpeningHours
+
 
 
 
