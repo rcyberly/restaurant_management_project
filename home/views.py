@@ -114,9 +114,11 @@ def homepageview (request):
         context5 = {
             'name_of_item': name_of_item,
             'description_of_item': description_of_item,
-            ''
+            'price_of_item': price_of_item,
+            'image_of_item' : image_of_item,
             
         }
+    return render(request, 'home/homepage.html', context5)
 
 
     
