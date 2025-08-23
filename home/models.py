@@ -49,9 +49,10 @@ class MenuItems(models.Model):
     def '__str__'(self):
         return self.MenuItems
 class RestaurantOpeningHours(model.Model):
-    day = models.CharField(max_length = 30, choice = ('Monday','tuesday', 'wednesday', 'Thursday', 'friday', 'staruday','sunday'))
+    day = models.CharField(, choice = ('Monday','tuesday', 'wednesday', 'Thursday', 'friday', 'staruday','sunday'))
+    time = models.DateTime(auto_now_add = True)
     def'__str__'(self):
-        return RestaurantOpeningHours
+        return (RestaurantOpeningHours)
 
 
 
