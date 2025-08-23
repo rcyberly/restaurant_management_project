@@ -36,6 +36,11 @@
         </div>
         {% endif %}
 
+        {form method ="get" action =""}
+        {% csrf_token %}
+        <input type="text" name="search" placeholder="SEARCH MENU ITEMS" value="{search_query}">
+        <button type="submit">SEARCH MENU</button>
+
         <div class="search-container">
             <form action ="/search" method="get">
                 <input type="text" name ="search" placeholder="Search">
