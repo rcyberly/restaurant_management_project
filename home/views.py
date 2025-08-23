@@ -4,6 +4,8 @@ from django.contrib import messages
 import datetime
 from .models import MenuItems
 from .serializers import MenuItemsSerializers
+from django.core.mail import send_mail
+from .forms import ContactForm
 
 
 # Create your views here.
@@ -119,6 +121,27 @@ def homepageview (request):
             
         }
     return render(request, 'home/homepage.html', context5)
+
+
+    def contact_view(request):
+        if request.method =='POST':
+            form = ContactForm(request.POST)
+            if form.is_valid():
+                name = form.cleaned_data['name']
+                email = form.cleaned_data['email']
+                subject = form.cleaned_data['subject']
+                message = form.cleaned_data['message']
+                send_mail = (
+                    f"New Contact Form Submission : {subject}",
+                    f"Form:\n{name}\n\nemail:{email}\n\n\n{message}",
+                    settings.EMAIL_HOST_USER,
+                    ['emailidrest@example.com'],
+                    fail_sliently = False,
+                )
+            else:
+                form = ContactForm()
+            return render(request, 'home/contactus.html', {'form':form})
+        
 
 
     
