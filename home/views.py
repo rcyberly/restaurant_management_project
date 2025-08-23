@@ -109,6 +109,12 @@ def homepageview (request):
         }
     return render(request, 'home/homepage.html', context4)
 
+    def Menuitem_view (request):
+        Menuitem = MenuItem.objects.all()
+        context5 = {
+            
+        }
+
 
     
         
