@@ -52,6 +52,12 @@
             <h1>Near Main Wipro Gate Neeladhari Road Bangalore Karnataka</h1>
             <p>Contact no: 0000000000</p>
         </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">SEND EMAIL</button>
+        </form>
     </body>
 </html>
 {% endblock %}
