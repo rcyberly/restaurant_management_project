@@ -123,7 +123,7 @@ def homepageview (request):
     return render(request, 'home/homepage.html', context5)
 
 
-    def contact_view(request):
+    def homepage_search_view(request):
         if request.method =='POST':
             form = ContactForm(request.POST)
             if form.is_valid():
@@ -141,6 +141,20 @@ def homepageview (request):
             else:
                 form = ContactForm()
             return render(request, 'home/contactus.html', {'form':form})
+
+    def homepage_search_view(request):
+
+        search_query = request.GET.get('a','')
+
+        if search_query:
+            menu_items = MenuItems.objects.filter(name__icontains = search_query)
+        else:
+            menu_items = MenuItems.objects.all()
+        context6 = {
+            'menu_items':menu_items,
+            'search_query':search_query,
+        }
+        return render(request, 'home/homepage.html',context6)
         
 
 
