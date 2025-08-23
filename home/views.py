@@ -113,6 +113,7 @@ def homepageview (request):
         Menuitem = MenuItem.objects.all()
         context5 = {
             'name_of_item': name_of_item,
+            'description_of_item': description_of_item,
             ''
             
         }
