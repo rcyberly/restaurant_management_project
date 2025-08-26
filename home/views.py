@@ -155,6 +155,16 @@ def homepageview (request):
             'search_query':search_query,
         }
         return render(request, 'home/homepage.html',context6)
+
+    def restaurant_phone_number(request):
+
+        phone_number = RestaurantPhoneNumber.objects.all()
+
+        context7 = {
+            'phone_number' = phone_number
+        }
+
+        return render(request, 'home/homepage.html', context7)
         
 
 
