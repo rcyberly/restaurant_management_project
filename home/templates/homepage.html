@@ -168,5 +168,11 @@
     </div>
     {% endfor %}
 
+    <form>
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="submit">
+    </form>
+
 </html>
 {% endblock %}
