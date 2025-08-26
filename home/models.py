@@ -1,5 +1,6 @@
 from django.db import models
 from .models import models
+from django.contrib.auth.models User 
 # Create your models here.
 class Restaurant(object):
     def'__init__'(self, name = "THE NORTSOUT RESTAURANT", slogan = "TASTE CONNECTS FROM NORTH TO SOUTH"):
@@ -72,6 +73,15 @@ class RestaurantImage(models.Model):
     def'__str__'(self):
         self.RestaurantImage
 
+class Cart (models.Model):
+    user = models.OneToOneField(user, on_delete = user.CASCADE)
+    created_at = models.DateTimeField(auto_now_add = True)
+class cart_item(models.Model):
+    cart = models.ForignKey(Cart, on_delete = models.CASCADE)
+    item_id = models.IntegerField()
+    quantity = models.IntegerField(default= 1)
+    def'__str__'(self):
+        return f"item {self.item_id} in cart for {self.Cart.user.username}"
 
 
 
