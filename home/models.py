@@ -76,7 +76,7 @@ class RestaurantImage(models.Model):
 class Cart (models.Model):
     user = models.OneToOneField(user, on_delete = user.CASCADE)
     created_at = models.DateTimeField(auto_now_add = True)
-class cart_item(models.Model):
+class CartItem(models.Model):
     cart = models.ForignKey(Cart, on_delete = models.CASCADE)
     item_id = models.IntegerField()
     quantity = models.IntegerField(default= 1)
