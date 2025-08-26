@@ -159,6 +159,9 @@
     </div>
     {% endfor %}
 
+
+    <a href = "{% url 'cart' %}" >Cart (<span>{{cart_item_count}}</span>)</a>
+
     {% for items in restaurant_phone_number %}
     <div>
         <h3>Feel Free to Contct us on {{items.restaurant_phone_number}}</h3>
