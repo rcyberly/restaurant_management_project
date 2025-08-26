@@ -28,6 +28,16 @@
         <div class="hp1">
             <h1>Welcome to Restaurant Management System</h1>
         </div>
+
+        
+        {% for item in restaurant_image %}
+        <div>
+            <image src = "{{item.restaurant_image}}" width = "200" height = "200">
+        </div>
+        {% endfor %}
+
+
+
        {% if restaurant %}
         <div>
             <p>{{restaurant.name}}</p>
