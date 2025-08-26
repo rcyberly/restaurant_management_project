@@ -161,7 +161,7 @@ def homepageview (request):
         phone_number = RestaurantPhoneNumber.objects.all()
 
         context7 = {
-            'phone_number' = phone_number
+            restaurant_phone_number' = restaurant_phone_number
         }
 
         return render(request, 'home/homepage.html', context7)
