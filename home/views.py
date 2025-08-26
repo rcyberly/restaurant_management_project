@@ -183,7 +183,16 @@ def homepageview (request):
         return render(request, 'home/aboutus-restaurnat.html'{'restaurant': about_restaurant})
 
     
-        
+    def contact_form_view(request):
+        if request.method == 'POST':
+            form = contact_form_view('POST')
+            if form_is_valid:
+                form.cleaned_data['email']
+                form.cleaned_data['message']
+            else:
+                form.contact_form_view()
+                return render
+        return render(request, 'home/homepage.html', {'form':form})
     
 
                 
