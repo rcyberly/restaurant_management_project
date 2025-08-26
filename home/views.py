@@ -175,7 +175,12 @@ def homepageview (request):
         return render(request,'home/homepage.html', context8)
 
     def aboutus_restaurnat_info(request):
-        about_restaurant = 
+        about_restaurant = {
+            'name' : 'THE NORTH-SOUTH RESTAURANT',
+            'History' : 'When we planned to open a small Food Corner in Neeladhri Bangalore we Found we started to sell Idli , Dosa and Sambar we found it is selling in ample amount,\n Once we tried to keep Rajmah-Rice and KidneyBeans we found that there was a plenty of sale then Makki-di-Roti and Sarson da Sag, we found that The punjabis who lived in Vellore premise of bangalore started to eat and Then we started to keep Hyderabadi Biryani but veg, Then Payasam of Tamil Nadu and Kerala Dishes like utthapam, we found there was a huge sale and By this sale we decided to open Restaurant by the name of THE NORTH-SOUTH RESTAURANT',
+            'Mission' : 'Our mission is to keep our Customer happy be That Customer a Poor , Rich or whatever type of Customer he is after all Customer is Customer for us, Keeping in that view we do not compromise with taste and Qaulity',
+        }
+        retrun render(request, '')
 
     
         
