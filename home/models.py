@@ -62,6 +62,11 @@ class MenuItem (models.Model):
     def'__str__'(self):
         self.Menuitem 
 
+class RestaurantPhoneNumber(models.Model):
+    Restarant_phone_number = models.CharField(max_length = 30)
+    def'__str__'(self):
+        self.RestaurantPhoneNumber
+
 
 
 
