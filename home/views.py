@@ -6,7 +6,7 @@ from .models import MenuItems
 from .serializers import MenuItemsSerializers
 from django.core.mail import send_mail
 from .forms import ContactForm
-
+from .models import Cart, CartItem
 
 # Create your views here.
 def homepageview (request):
