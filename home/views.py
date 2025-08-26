@@ -166,7 +166,9 @@ def homepageview (request):
 
         return render(request, 'home/homepage.html', context7)
         
+    def restaurna_image_view(request):
 
+        restaurant_image = RestaurnatImage
 
     
         
