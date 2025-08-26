@@ -67,6 +67,11 @@ class RestaurantPhoneNumber(models.Model):
     def'__str__'(self):
         self.RestaurantPhoneNumber
 
+class RestaurantImage(models.Model):
+    restaurant_image = models.ImageField(upload_to="logoimages/", blank=True,null=True)
+    def'__str__'(self):
+        self.RestaurantImage
+
 
 
 
