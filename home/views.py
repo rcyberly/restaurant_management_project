@@ -161,15 +161,18 @@ def homepageview (request):
         phone_number = RestaurantPhoneNumber.objects.all()
 
         context7 = {
-            restaurant_phone_number' = restaurant_phone_number
+            restaurant_phone_number' : restaurant_phone_number
         }
 
         return render(request, 'home/homepage.html', context7)
         
     def restaurna_image_view(request):
 
-        restaurant_image = RestaurnatImage
-
+        restaurant_image = RestaurnatImage.objects.all()
+        context8 = {
+            'restaurant_image' : restaurnat_image
+        }
+        return render(request,'home/homepage.html', context8)
     
         
 
