@@ -173,6 +173,10 @@ def homepageview (request):
             'restaurant_image' : restaurnat_image
         }
         return render(request,'home/homepage.html', context8)
+
+    def aboutus_restaurnat_info(request):
+        about_restaurant = 
+
     
         
 
