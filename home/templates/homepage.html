@@ -80,6 +80,8 @@
         </div>
         {% endfor %}
 
+
+
         {form method ="get" action =""}
         {% csrf_token %}
         <input type="text" name="search" placeholder="SEARCH MENU ITEMS" value="{search_query}">
@@ -90,7 +92,7 @@
                 <input type="text" name ="search" placeholder="Search">
                 <button type="Submit">Search</button>
 
-            </form>>
+            </form>
         </div>
 
         <div class = "RESTNAME">
