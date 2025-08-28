@@ -212,6 +212,13 @@ def homepageview (request):
         }
         return render(request, 'home/homepage.html', context9)
 
+    def homepage_view(request):
+        date_time = datetime.now()
+        context10 = {
+            'date_time':date_time,
+        }
+        return render(request,'home/homepage.html', context10)
+
                 
 
         
