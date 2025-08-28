@@ -193,7 +193,24 @@ def homepageview (request):
                 form.contact_form_view()
                 return render
         return render(request, 'home/homepage.html', {'form':form})
-    
+
+    def frequently_asked_questions(request):
+        faqs = [
+            {
+                'Question' : 'How do i place an order ?',
+                'Answer' : 'To place an order you can see menu item and their price first and then click on button to place an order',
+
+            }
+            {
+                'Question': 'What are the menu items you serve ?',
+                'Answer' : 'We serve authentic Dishes eaten in Tamil , Mallayallam , Kannadda , Telegu , Maharashtrian dishes, Punjabi and North and South indian Dishes',
+            }
+        ]
+
+        context9 = {
+            'faqs': faqs
+        }
+        return render(request, 'home/homepage.html', context9)
 
                 
 
