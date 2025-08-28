@@ -73,6 +73,13 @@
         </div>
         {% endif %}
 
+        {% for faq in faqs %}
+        <div class="faqss">
+            <h3>{{faq.Question}}</h3>
+            <p>{{faq.Answers}}</p>
+        </div>
+        {% endfor %}
+
         {form method ="get" action =""}
         {% csrf_token %}
         <input type="text" name="search" placeholder="SEARCH MENU ITEMS" value="{search_query}">
