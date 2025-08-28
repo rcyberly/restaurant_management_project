@@ -21,6 +21,11 @@
                 padding : 25px;
             }
 
+            .restaurantphone{
+            background-color: red;
+            color: yellow;
+            }
+
 
         </style>
     </head>
@@ -167,13 +172,18 @@
         <h3>Feel Free to Contct us on {{items.restaurant_phone_number}}</h3>
     </div>
     {% endfor %}
+
+
+
     <!--Once again i am displaying phone number as per Task-->
     
     {% for items in restaurant_phone_number %}
     <div class ="restaurantphone">
-        <H3>Contact us on {{items.}}</H3>
+        <H3>Contact us on {{items.phone_number}}</H3>
     </div>
     {% endfor %}
+
+
     <form>
         {% csrf_token %}
         {{form.as_p}}
