@@ -39,10 +39,11 @@
         <div class="hp1">
             <h1>Welcome to Restaurant Management System</h1>
         </div>
-        
+        {% for dt in date_time %}
         <div class="datetime">
-            <h1>The Current Time is : **{{date_time}}**</h1>
+            <h1>The Current Time is : **{{date_time | F,J,Y}}**</h1>
         </div>
+        {% endfor %}
 
         <div class = "welcome">
             <h1>Welcome to  <span>THE NORTH-SOUTH RESTAURANT BANGALORE</span>Enjoy the Taste from NORTH TO SOUTH<span></span></h1>
